@@ -447,14 +447,12 @@ Noteworthy Changes:
 
 * Version 2.0.1 (2014-11-09)
 
-Bug Fixes:
-  - Fix tree REST endpoint to allow modification of the strictMatch and storeFailure fields
+ 	  - Fix an issue with malformed, double dotted timestamps (#724).
+  - Fix an issue with tag filters where we need a copy before modifying the list.
+  - Fix comments in the config file around TCP no delay settings.
   - Fix compacted millisecond columns throwing an error during fsck
   - Fix tsd startup directory permission checks
   - Fix thread safety of pending UID assignment when they are complete
-  - Fix compaction queue flushing on tsd shutdown
-  - Fix RTPublisher plugin floating point value detection where it was previously posting to the wrong method
-  - Fix TsdbQuery.toString() to avoid looing up UIDs if an error was thrown as this can cause cause a deadlock
 
 Noteworthy changes:
   - Add Travis CI build support
